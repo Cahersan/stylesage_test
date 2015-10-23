@@ -1,17 +1,16 @@
-import sys
+number = ''
 
-number = 1335
-
-str_number = str(number)
+while not number.isdigit():
+	number = raw_input("Please insert a long number: ")
 
 output = ''
-count = len(str_number)-1
+count = len(number)-1
 
-for s in str_number:
-    output = output + s 
+for s in number:
+    output +=  s 
     if count % 3 == 0:
-       output = output +  ','
+       output += ','
     
-    count=count-1
+    count -= 1
 
 print output[0:len(output)-1]    
